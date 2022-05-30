@@ -22,7 +22,7 @@ const ProductDetail = () => {
     useEffect(() => {
         fetchProductDetails();
         
-    })
+    },[])
 
     return(
         <>
