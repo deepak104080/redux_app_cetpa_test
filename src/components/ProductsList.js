@@ -30,9 +30,9 @@ const ProductList = () => {
             <div className="row bg-secondary bg-opacity-10">
                 <div className="col-12">
                     <div className="row">
-                    {products && products.map((temp) => (
+                    {products && products.map((temp, index) => (
                         
-                        <div className="col-4 border">
+                        <div className="col-4 border" key={temp.id+index}>
                             <Link to={`/product/${temp.id}`}>
                                <div>
                                     <img src={temp.image} className="img-fluid"/>
@@ -55,3 +55,8 @@ const ProductList = () => {
 
 
 export default ProductList;
+
+
+//Redux Middleware - Redu-saga, Redux-thunk
+// test cases files
+// mock data file

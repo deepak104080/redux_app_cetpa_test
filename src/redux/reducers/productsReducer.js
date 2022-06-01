@@ -29,8 +29,18 @@ export const productsReducer = (state = initialState, {type, payload}) => {
 export const selectedProductReducer = (state = {}, {type, payload}) => {
     switch(type) {
         case ActionTypes.SELECTED_PRODUCT:
-            console.log('selected product reducer - ', type, payload);
+            // console.log('selected product reducer - ', type, payload);
             return {...state, ...payload};
+        default:
+            return state;
+    }
+}
+
+export const cartReducer = (state={}, {type, payload}) => {
+    switch(type) {
+        case ActionTypes.ADD_PRODUCT_TO_CART:
+            // console.log('cart reducer - ', type, payload);
+            return {...state, cartProducts: payload};
         default:
             return state;
     }
