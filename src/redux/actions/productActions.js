@@ -7,11 +7,11 @@ export const setProducts = (products) => {
     };
 };
 
-export const selectedProduct = (product) => {
-    console.log('selected product action - ', product );
+export const selectedProduct = (productSelected) => {
+    console.log('selected product action - ', productSelected );
     return {
         type: ActionTypes.SELECTED_PRODUCT,
-        payload: product,
+        payload: productSelected,
     };
 };
 

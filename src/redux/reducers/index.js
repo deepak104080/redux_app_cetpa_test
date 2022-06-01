@@ -3,7 +3,7 @@ import { productsReducer, selectedProductReducer, cartReducer } from './products
 
 const reducers = combineReducers({
     allProducts: productsReducer,
-    product: selectedProductReducer,
+    productSelected: selectedProductReducer,
     cart: cartReducer,
 })
 

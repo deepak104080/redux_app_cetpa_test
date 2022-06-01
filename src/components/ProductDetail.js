@@ -6,7 +6,7 @@ import { selectedProduct, addProductToCart } from "../redux/actions/productActio
 
 
 const ProductDetail = () => {
-    const tempProduct = useSelector((state) => state.product);
+    const tempProduct = useSelector((state) => state.productSelected);
 
     console.log('selector data in product---', tempProduct);
     const {category, description, id : tempId, image, price, rating, title} = tempProduct;
@@ -50,11 +50,11 @@ const ProductDetail = () => {
                         </div>
                         <div className="col-4">
                             <h3>{title || ' '}</h3>
-                            <h3>{category || ' '}</h3>
-                            <h3>{description || ' '}</h3>
+                            <h4>Category - {category || ' '}</h4>
+                            <p>Description - {description || ' '}</p>
                             {/* <h3>{rating.rate || ' '}</h3>
                             <h3>{rating.count || ' '}</h3> */}
-                            <h3>{price || ' '}</h3>
+                            <h4>Price - {price || ' '}</h4>
                         </div>
                         <div className="col-3">
                             <input type="text" placeholder="Check Service"/>
