@@ -8,6 +8,7 @@ import ProductList from './components/ProductsList';
 import ProductDetail from './components/ProductDetail';
 import Cart from './components/Cart';
 import Orders from './components/Orders';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Header/>
         <Routes>
           <Route path='/' element={<ProductList/>}/>
+          <Route path='/login' element={<Login/>}/>
           <Route path='/product/:id' element={<ProductDetail/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/orders' element={<Orders/>}/>
