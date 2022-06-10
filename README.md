@@ -68,3 +68,30 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+Redux
+Actions, Reducer, Store
+
+
+React Redux
+Provider, useSelector, useDispatch
+connect - mapStateToprops, mapDispatchToProps
+middleware - api handling
+
+
+Redux Toolkit
+store - configurestore  | store - createstore
+import { configureStore } from '@reduxjs/toolkit'
+create slices and then combine in index.js | separate reducers and then combinereducer 
+
+
+const slice1 = createSlice({
+    name: 'slice1',
+    initialStateCart = [],
+    reducers : {
+        list of functions
+    }
+})

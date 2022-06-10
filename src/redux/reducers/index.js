@@ -4,6 +4,7 @@ import { selectedProductReducer } from './selectedProductReducer';
 import { cartReducer } from './cartReducer';
 import { checkoutReducer } from "./checkoutReducer";
 import { loginReducer } from './loginReducer';
+import { tempReducer } from './tempReducer';
 
 const reducers = combineReducers({
     allProducts: productsReducer,
@@ -11,6 +12,7 @@ const reducers = combineReducers({
     cart: cartReducer,
     order: checkoutReducer,
     login: loginReducer,
+    fetch: tempReducer,
 })
 
 export default reducers;
