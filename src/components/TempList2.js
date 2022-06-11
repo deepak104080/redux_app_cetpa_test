@@ -4,9 +4,10 @@ import { fetchProductsList } from "../redux/actions/tempActions";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const TempList = (props) => {
-    const products = useSelector((state) => state.fetch.products);
-    const dispatch = useDispatch();
+const TempList2 = (props) => {
+    const {callApi, products} = props;
+    // const products = useSelector((state) => state.allProducts.products);
+    // const dispatch = useDispatch();
 
     // const fetchProducts = () => {
     //     axios.get('https://fakestoreapi.com/products')
@@ -20,14 +21,14 @@ const TempList = (props) => {
     //     fetchProducts();
     // }, [])
 
-    const callApi = () => {
-        console.log('api call action triggered from comp');
-        dispatch(fetchProductsList());
-    }
+    // const callApi = () => {
+    //     console.log('api call action triggered from comp');
+    //     dispatch(fetchProductsList());
+    // }
 
-    // useEffect(() => {
-    //     console.log('products', products);
-    // })
+    useEffect(() => {
+        console.log('products', products);
+    })
 
     return(
         <> 
@@ -68,6 +69,12 @@ const TempList = (props) => {
         </>
     )
 }
+const mapStateToProps = (state) => ({ products: state.fetch.products })
+
+const mapDispatchToProps = (dispatch) => ({
+    callApi: () => dispatch(fetchProductsList()),
+  })
 
 
-export default TempList;
+// export default TempList;
+export default connect(mapStateToProps, mapDispatchToProps)(TempList2);

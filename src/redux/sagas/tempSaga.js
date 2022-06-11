@@ -29,7 +29,7 @@ function* fetchproductslist (action) {
 
 
 function* tempSaga() {
-    yield takeLatest('FETCH_PRODUCTS_LIST', fetchproductslist);
+    yield takeLatest(ActionTypes.FETCH_PRODUCTS_LIST, fetchproductslist);
 }
 
 export default tempSaga;

@@ -10,6 +10,7 @@ import Cart from './components/Cart';
 import Orders from './components/Orders';
 import Login from './components/Login';
 import TempList from './components/TempList';
+import TempList2 from './components/TempList2';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/orders' element={<Orders/>}/>
           <Route path='/templist' element={<TempList/>}/>
+          <Route path='/templist2' element={<TempList2/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>
