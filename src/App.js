@@ -11,6 +11,7 @@ import Orders from './components/Orders';
 import Login from './components/Login';
 import TempList from './components/TempList';
 import TempList2 from './components/TempList2';
+import AddProduct from './components/AddProduct';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path='/orders' element={<Orders/>}/>
           <Route path='/templist' element={<TempList/>}/>
           <Route path='/templist2' element={<TempList2/>}/>
+          <Route path='/addproduct' element={<AddProduct/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>
