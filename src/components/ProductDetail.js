@@ -34,7 +34,7 @@ const ProductDetail = () => {
     //useSelector for detailed product or else make api call if detailed api gives much more data
 
     const fetchProductDetails = async () => {
-        const url = 'https://fakestoreapi.com/products/' + id;
+        const url = 'http://localhost:4000/products/' + id;
         const response = await axios.get(url).catch((err) => console.log('err', err));
         // console.log('data from detailed description api call - ', response.data);
         //call disptach;

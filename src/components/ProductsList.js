@@ -9,7 +9,7 @@ const ProductList = () => {
     const dispatch = useDispatch();
 
     const fetchProducts = () => {
-        axios.get('https://fakestoreapi.com/products')
+        axios.get('http://localhost:4000/products')
         .then((response) => {
             console.log(response.data);
             dispatch(setProducts(response.data));
@@ -32,8 +32,8 @@ const ProductList = () => {
                     <div className="row">
                     {products && products.map((temp, index) => (
                         
-                        <div className="col-4 border" key={temp.id+index}>
-                            <Link to={`/product/${temp.id}`}>
+                        <div className="col-4 border" key={temp.productid+index}>
+                            <Link to={`/product/${temp.productid}`}>
                                <div>
                                     <img src={temp.image} className="img-fluid"/>
                                 </div>

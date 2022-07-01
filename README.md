@@ -95,3 +95,12 @@ const slice1 = createSlice({
         list of functions
     }
 })
+
+
+
+
+
+
+
+
+
