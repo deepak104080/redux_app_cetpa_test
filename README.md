@@ -104,3 +104,48 @@ const slice1 = createSlice({
 
 
 
+# ###########################################################
+Pages/Features List - 
+
+Module 1 - End User Module
+HomePage - List - API 1
+Product Details - API 2
+Cart
+Checkout - API 3
+Orders
+Wishlist
+Registration - API 4
+Login - API 5
+
+
+Module 2 - Admin/Employee Module
+Add Product - API 6
+
+# ###########################################################
+List of APIs
+
+1) http://localhost:4000/products - Products
+2) http://localhost:4000/products/:id - Products
+3) for order placement - Orders
+4) Registration - Users - post api for users table
+5) Login - Users - get api for user with specific details
+6) http://localhost:4000/products(POST) - Products
+
+# ###########################################################
+
+List of Tables
+
+Products
+Users
+--Orders
+
+
+
+
+
+# ###########################################################
+
+
+Login - 
+Authentication
+Authorization - Auth0, Passport, JWT Tokens

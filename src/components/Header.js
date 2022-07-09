@@ -5,6 +5,7 @@ import { logoutUser } from '../redux/actions/loginActions';
 
 const Header = () => {
     const loginDetails = useSelector((state) => state.login.authUser);
+    console.log('loginDetails', loginDetails);
     const dispatch = useDispatch();
 
     const logoutfn = () => {
@@ -31,7 +32,7 @@ const Header = () => {
                 <Link className="btn btn-success" to="/wishlist">Wishlist</Link>
             </div>
             <div className="col-2">
-                
+                {loginDetails.userName}
             </div>
             
             {

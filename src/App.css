@@ -6,3 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.home-image {
+  max-height: 500px;
+  min-height: 500px;
+  min-width: 100%;
+}

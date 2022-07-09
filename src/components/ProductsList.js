@@ -33,9 +33,9 @@ const ProductList = () => {
                     {products && products.map((temp, index) => (
                         
                         <div className="col-4 border" key={temp.productid+index}>
-                            <Link to={`/product/${temp.productid}`}>
+                            <Link to={`/product/${temp.id}`}>
                                <div>
-                                    <img src={temp.image} className="img-fluid"/>
+                                    <img src={temp.image} className="img-fluid home-image"/>
                                 </div>
                             </Link>
                             <div>

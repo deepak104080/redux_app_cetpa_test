@@ -11,8 +11,8 @@ const ProductDetail = () => {
     const loginDetails = useSelector((state) => state.login.authUser);
     const cartDetails = useSelector((state) => state.cart.cartProducts);
 
-    // console.log('selector data in product---', tempProduct);
-    const {category, description, id : tempId, image, price, rating, title} = tempProduct;
+    console.log('selector data in product---', tempProduct);
+    const {category, description, id : tempId, image, price, title} = tempProduct;
 
     // let tempArr = cartDetails.map((temp) => {
     //     return temp.id;
@@ -69,8 +69,6 @@ const ProductDetail = () => {
                             <h3>{title || ' '}</h3>
                             <h4>Category - {category || ' '}</h4>
                             <p>Description - {description || ' '}</p>
-                            {/* <h3>{rating.rate || ' '}</h3>
-                            <h3>{rating.count || ' '}</h3> */}
                             <h4>Price - {price || ' '}</h4>
                         </div>
                         <div className="col-3">
