@@ -9,6 +9,7 @@ import ProductDetail from './components/ProductDetail';
 import Cart from './components/Cart';
 import Orders from './components/Orders';
 import Login from './components/Login';
+import Register from './components/Register';
 import TempList from './components/TempList';
 import TempList2 from './components/TempList2';
 import AddProduct from './components/AddProduct';
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path='/' element={<ProductList/>}/>
           <Route path='/login' element={<Login/>}/>
+          <Route path='/register' element={<Register/>}/>
           <Route path='/product/:id' element={<ProductDetail/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/orders' element={<Orders/>}/>

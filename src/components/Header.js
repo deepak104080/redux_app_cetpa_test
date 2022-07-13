@@ -8,6 +8,9 @@ const Header = () => {
     console.log('loginDetails', loginDetails);
     const dispatch = useDispatch();
 
+    const cartProductList = useSelector((state) => state.cart.cartProducts);
+    console.log('cart product in cart - ', cartProductList);
+
     const logoutfn = () => {
         dispatch(logoutUser());
     }
@@ -23,7 +26,7 @@ const Header = () => {
                 <Link className="btn btn-success" to="/">Home</Link>
             </div>
             <div className="col-2">
-                <Link className="btn btn-success" to="/cart">Cart</Link>
+                <Link className="btn btn-success" to="/cart">Cart - {loginDetails.loginStatus && cartProductList.length}</Link>
             </div>
             <div className="col-2">
                 <Link className="btn btn-success" to="/orders">Orders</Link>
@@ -31,21 +34,29 @@ const Header = () => {
             <div className="col-2">
                 <Link className="btn btn-success" to="/wishlist">Wishlist</Link>
             </div>
-            <div className="col-2">
-                {loginDetails.userName}
-            </div>
+            
             
             {
                 loginDetails.loginStatus ?
                 (
-                <div className="col-2 text-end">
-                    <button className="btn btn-primary" onClick={logoutfn}>Logout</button>
-                </div>
+                    <>
+                    <div className="col-2">
+                        {loginDetails.userName}
+                    </div>
+                    <div className="col-2 text-end">
+                        <button className="btn btn-primary" onClick={logoutfn}>Logout</button>
+                    </div>
+                </>
                 ) :
-                (
-                <div className="col-2 text-end">
-                    <Link className="btn btn-primary" to="/login">Login</Link>
-                </div>
+                (   
+                <>
+                    <div className="col-2 text-end">
+                        <Link className="btn btn-success" to="/register">Register</Link>
+                    </div>
+                    <div className="col-2 text-end">
+                        <Link className="btn btn-primary" to="/login">Login</Link>
+                    </div>
+                </>
                 )
             }
         </div>

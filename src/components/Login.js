@@ -40,7 +40,7 @@ const Login = () => {
                 "username": username,
                 "password": password
             })
-            console.log(response);
+            //console.log(response);
             if(response.status === 200) {
                 dispatch(loginUser(username));
                 errorRef.current.textContent = '';
