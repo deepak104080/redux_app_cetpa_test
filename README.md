@@ -108,18 +108,18 @@ const slice1 = createSlice({
 Pages/Features List - 
 
 Module 1 - End User Module
-HomePage - List - API 1
-Product Details - API 2
-Cart
-Checkout - API 3
+*HomePage - List - API 1
+*Product Details - API 2
+*Cart
+Checkout - API 3 and 7
 Orders
 Wishlist
-Registration - API 4
-Login - API 5
+*Registration - API 4
+*Login - API 5
 
 
 Module 2 - Admin/Employee Module
-Add Product - API 6
+*Add Product - API 6
 
 # ###########################################################
 List of APIs
@@ -130,6 +130,7 @@ List of APIs
 4) Registration - Users - post api for users table
 5) Login - Users - get api for user with specific details
 6) http://localhost:4000/products(POST) - Products
+7) POST - Order Details - Order Details Table
 
 # ###########################################################
 
@@ -137,7 +138,9 @@ List of Tables
 
 Products
 Users
---Orders
+--user details - address, gender, dob, profilepic
+Orders - orderid, orderdate, deliverydate, amount, mobile, pincode, address, paymentmode, paymentstatus, orderstatus
+order details - orderid, itemid, id, price, quantity
 
 
 
