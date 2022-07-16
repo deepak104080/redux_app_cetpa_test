@@ -77,8 +77,8 @@ const Login = () => {
         <div className="row bg-secondary bg-opacity-50">
             <div className="col-12">
                 
-                Username: <input type="text" name="" ref={inputRef1}  /><br></br>
-                Password: <input type="password" name="" ref={inputRef2}  /><br></br>
+                Username: <input type="text" name="" ref={inputRef1} value="deepak123" /><br></br>
+                Password: <input type="password" name="" ref={inputRef2}  value="123456" /><br></br>
                 <button className="btn btn-success" onClick={loginFn}>Login</button>
                 <div className="text-danger" ref={errorRef}></div>
             </div>

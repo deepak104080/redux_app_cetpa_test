@@ -31,7 +31,7 @@ const Cart = () => {
 
     const checkoutFn = () => {
         dispatch(checkoutOrder(cartProductList));
-        navigate('/orders');
+        navigate('/checkout');
     }
 
     const removeProduct = (id) => {

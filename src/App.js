@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import ProductList from './components/ProductsList';
 import ProductDetail from './components/ProductDetail';
 import Cart from './components/Cart';
+import Checkout from './components/Checkout';
 import Orders from './components/Orders';
 import Login from './components/Login';
 import Register from './components/Register';
@@ -25,6 +26,7 @@ function App() {
           <Route path='/register' element={<Register/>}/>
           <Route path='/product/:id' element={<ProductDetail/>}/>
           <Route path='/cart' element={<Cart/>}/>
+          <Route path='/checkout' element={<Checkout/>}/>
           <Route path='/orders' element={<Orders/>}/>
           <Route path='/templist' element={<TempList/>}/>
           <Route path='/templist2' element={<TempList2/>}/>

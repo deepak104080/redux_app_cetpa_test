@@ -112,7 +112,7 @@ Module 1 - End User Module
 *Product Details - API 2
 *Cart
 Checkout - API 3 and 7
-Orders
+Orders - API 9
 Wishlist
 *Registration - API 4
 *Login - API 5
@@ -120,6 +120,7 @@ Wishlist
 
 Module 2 - Admin/Employee Module
 *Add Product - API 6
+All Orders - API 8
 
 # ###########################################################
 List of APIs
@@ -131,6 +132,8 @@ List of APIs
 5) Login - Users - get api for user with specific details
 6) http://localhost:4000/products(POST) - Products
 7) POST - Order Details - Order Details Table
+8) GET - All Orders - Orders
+9) GET - User Orders - Orders
 
 # ###########################################################
 
@@ -141,6 +144,7 @@ Users
 --user details - address, gender, dob, profilepic
 Orders - orderid, orderdate, deliverydate, amount, mobile, pincode, address, paymentmode, paymentstatus, orderstatus
 order details - orderid, itemid, id, price, quantity
+customer_address - userid, addresstype, name, flatnum, society/town/village, city, state, pincode, mobile
 
 
 
