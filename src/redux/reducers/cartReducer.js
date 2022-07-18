@@ -1,7 +1,7 @@
 import { ActionTypes } from "../constants/action-types";
 
 const initialStateCart = {
-    cartProducts:[]
+    cartProducts:[],
 }
 
 
@@ -18,6 +18,10 @@ export const cartReducer = (state = initialStateCart, {type, payload}) => {
                 return temp.id !== payload;
             })
             return {...state, cartProducts: temp2};
+        case ActionTypes.EMPTY_CART:
+            console.log('----------empty cart---------');
+            state = initialStateCart;
+            return state;
         default:
             return state;
     }

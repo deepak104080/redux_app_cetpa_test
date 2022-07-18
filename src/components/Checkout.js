@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { saveUrl } from '../redux/actions/loginActions';
+import {emptyCart} from '../redux/actions/cartActions';
 import axios from 'axios';
 
 const Checkout = () => {
@@ -54,7 +55,10 @@ const Checkout = () => {
             const response = await axios.post(url, obj);
             console.log(response);
             if(response.status === 201) {
-                navigate('/orders');
+                console.log('response.orderid', response.data.orderid);
+                //empty the cart
+                dispatch(emptyCart());
+                navigate('/orders', {state: response.data.orderid});
                 setErrorOrder(false);
             }
         }

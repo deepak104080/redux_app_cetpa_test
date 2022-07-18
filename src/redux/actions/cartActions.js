@@ -15,3 +15,9 @@ export const removeProductFromCart = (id) => {
         payload: id,
     }
 }
+
+export const emptyCart = () => {
+    return{
+        type: ActionTypes.EMPTY_CART
+    }
+}

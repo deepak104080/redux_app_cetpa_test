@@ -112,7 +112,7 @@ Module 1 - End User Module
 *Product Details - API 2
 *Cart
 Checkout - API 3 and 7
-Orders - API 9
+Orders - API 9 and 10
 Wishlist
 *Registration - API 4
 *Login - API 5
