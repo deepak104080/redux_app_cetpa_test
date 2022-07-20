@@ -13,7 +13,7 @@ const Orders = () => {
     const [listOrders, setListOrders] = useState([])
 
     const {state} = useLocation();
-    console.log(state);
+    console.log('state', state);
 
     const callOrderApi = async () => {
         const url = 'http://localhost:4000/orders/orderbyorder/' + state;
@@ -29,7 +29,9 @@ const Orders = () => {
         setListOrders(response.data);
     }
     useEffect(() => {
-        callOrderApi();
+        if(state) {
+            callOrderApi();
+        }
         callOrderListApi();
     }, [])
 
@@ -48,8 +50,14 @@ const Orders = () => {
         }
     }, [loginDetails.loginStatus])
 
+    useEffect(() => {
+        console.log('order, listOrders', order, listOrders);
+    })
+
     return(
         <>
+            {Object.keys(order).length !== 0 && (
+            <>
             <div className="row bg-info bg-opacity-50">
                 <div className="col-12">
                     <h2>Order Placed Successfully</h2>
@@ -70,6 +78,8 @@ const Orders = () => {
                     <div>Payment Status - {order.paymentstatus ? 'Successfull' : 'Pending'}</div>
                 </div>
             </div>
+            </>
+            )}
 
 
             <div className="row bg-info bg-opacity-50">
