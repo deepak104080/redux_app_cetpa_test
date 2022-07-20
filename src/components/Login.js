@@ -36,19 +36,21 @@ const Login = () => {
             //call api with username and password
             // const url = 'http://4000/users/login?username=deepak123&password=12345';
             // const url = 'http://4000/users/login/deepak123/12345'
-            const response = await axios.post('http://localhost:4000/users/login', {
-                "username": username,
-                "password": password
-            })
-            //console.log(response);
-            if(response.status === 200) {
-                dispatch(loginUser(username));
-                errorRef.current.textContent = '';
+            try{
+                const response = await axios.post('http://localhost:4000/users/login', {
+                    "username": username,
+                    "password": password
+                })
+                //console.log(response);
+                if(response.status === 200) {
+                    dispatch(loginUser(username));
+                    errorRef.current.textContent = '';
+                }
             }
-            else{
+            catch{
                 errorRef.current.textContent = 'Username or password incorrect.'
             }
-
+            
             //if login successfull
             // if(username === 'ecommerceuser' && password === '123456') {
             //     //dispatch login action
