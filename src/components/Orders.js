@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import { saveUrl } from '../redux/actions/loginActions';
 import axios from "axios";
 
@@ -59,16 +59,16 @@ const Orders = () => {
             {Object.keys(order).length !== 0 && (
             <>
             <div className="row bg-info bg-opacity-50">
-                <div className="col-12">
-                    <h2>Order Placed Successfully</h2>
-                </div>
-            </div>
-
-            <div className="row bg-success bg-opacity-10">
                 <div className="col-12 text-center">
                     <h2>Order Details</h2>
                 </div>
-                <div className="col-6 text-start">
+            </div>
+
+            <div className="row bg-success bg-opacity-10 mb-4">
+                <div className="col-12 text-center">
+                    <h4>Order Placed Successfully</h4>
+                </div>
+                <div className="col-12 text-center">
                     <div>Order ID - {order.orderid}</div>
                     <div>Order Date -  {order.orderdate}</div>
                     <div>Delivery Date - {order.deliverydate}</div>
@@ -77,19 +77,23 @@ const Orders = () => {
                     <div>Mobile - {order.mobile}</div>
                     <div>Payment Status - {order.paymentstatus ? 'Successfull' : 'Pending'}</div>
                 </div>
+
+                <div className="col-12 text-center">
+                    <Link to='/' className="btn btn-warning">Continue Shopping</Link>
+                </div>
             </div>
             </>
             )}
 
 
             <div className="row bg-info bg-opacity-50">
-                <div className="col-12">
+                <div className="col-12 text-center">
                     <h2>Orders History</h2>
                 </div>
             </div>
 
 
-            <div className="row bg-info bg-opacity-50">
+            <div className="row bg-info bg-opacity-10">
                 <div className="col-12">
                     
                     <table className="table table-responsive ">

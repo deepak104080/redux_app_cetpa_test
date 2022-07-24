@@ -16,49 +16,45 @@ const Header = () => {
     }
     return(
         <>
-        <div className="row bg-info bg-opacity-50">
-            <div className="col-12">
-                <h2>E-Commerce</h2>
+        <div className="row py-2">
+            <div className="col-4">
+                <Link to="/" className="app-logo"><h2>E-Commerce</h2></Link>
+            </div>
+            <div className="col-8 text-end">
+                <Link className="header-menu" to="/">Home</Link>
+                <Link className="header-menu" to="/cart">Cart {loginDetails.loginStatus && (<span class="cart-num">{cartProductList.length}</span>)} </Link>
+                <Link className="header-menu" to="/orders">Orders</Link>
+                <Link className="header-menu" to="/wishlist">Wishlist</Link>
             </div>
         </div>
         <div className="row bg-warning bg-opacity-50">
-            <div className="col-2">
-                <Link className="btn btn-success" to="/">Home</Link>
-            </div>
-            <div className="col-2">
-                <Link className="btn btn-success" to="/cart">Cart - {loginDetails.loginStatus && cartProductList.length}</Link>
-            </div>
-            <div className="col-2">
-                <Link className="btn btn-success" to="/orders">Orders</Link>
-            </div>
-            <div className="col-2">
-                <Link className="btn btn-success" to="/wishlist">Wishlist</Link>
+            <div className="col-8">
+                <Link className="btn btn-success me-2" to="/category/menclothes">Men Clothes</Link>
+                <Link className="btn btn-success me-2" to="/category/womenclothes">Women ClothesBaggage</Link>
+                <Link className="btn btn-success me-2" to="/category/jewellery">Jewellery</Link>
+                <Link className="btn btn-success me-2" to="/category/baggage">Baggage</Link>
             </div>
             
-            
+            <div className="col-4 text-end">
             {
                 loginDetails.loginStatus ?
                 (
                     <>
-                    <div className="col-2">
+                    <span className="btn btn-warning">
                         {loginDetails.userName}
-                    </div>
-                    <div className="col-2 text-end">
-                        <button className="btn btn-primary" onClick={logoutfn}>Logout</button>
-                    </div>
+                    </span>
+                    
+                    <button className="btn btn-primary" onClick={logoutfn}>Logout</button>
                 </>
                 ) :
                 (   
                 <>
-                    <div className="col-2 text-end">
-                        <Link className="btn btn-success" to="/register">Register</Link>
-                    </div>
-                    <div className="col-2 text-end">
-                        <Link className="btn btn-primary" to="/login">Login</Link>
-                    </div>
+                    <Link className="btn btn-success me-2" to="/register">Register</Link>
+                    <Link className="btn btn-primary" to="/login">Login</Link>
                 </>
                 )
             }
+            </div>
         </div>
         </>
     )

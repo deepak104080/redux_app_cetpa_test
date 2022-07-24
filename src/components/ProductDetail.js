@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { selectedProduct } from "../redux/actions/selectedProductActions";
+import { selectedProduct, removeSelectedProduct } from "../redux/actions/selectedProductActions";
 import { addProductToCart } from "../redux/actions/cartActions";
 
 
@@ -46,6 +46,13 @@ const ProductDetail = () => {
         
     },[])
 
+    useEffect(() => {
+        return () => {
+          //remove current product from cart
+          dispatch(removeSelectedProduct());
+        };
+      }, []);
+
     const addCartFn = () => {
         //call api to add data on server cart
         dispatch(addProductToCart(tempProduct));
@@ -58,8 +65,11 @@ const ProductDetail = () => {
                     <h2>Product Details</h2>
                 </div>
             </div>
-            <div className="row bg-secondary bg-opacity-10">
+            <div className="row my-4">
                 <div className="col-12">
+                    {title ? (
+
+                    
                     <div className="row">
                         <>
                         <div className="col-5">
@@ -81,7 +91,11 @@ const ProductDetail = () => {
                                 {
                                     cartStatus ? 
                                     (
+                                        <>
                                         <Link to='/cart' className="btn btn-info" >Go to Cart</Link>
+                                        <br></br>
+                                        <Link to='/' className="btn btn-primary">Continue Shopping</Link>
+                                        </>
                                     ) : 
                                     (
                                         <button onClick={addCartFn} className="btn btn-success" >Add to Cart</button>
@@ -99,6 +113,9 @@ const ProductDetail = () => {
                     
                     
                     </div>
+                    ): (
+                        <img src="https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif"/>
+                    )}
                 </div>
             </div>
         </>

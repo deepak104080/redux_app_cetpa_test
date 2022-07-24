@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ProductList from './components/ProductsList';
+import ProductListCategory from './components/ProductListCategory';
 import ProductDetail from './components/ProductDetail';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
@@ -22,6 +23,7 @@ function App() {
         <Header/>
         <Routes>
           <Route path='/' element={<ProductList/>}/>
+          <Route path='/category/:category' element={<ProductListCategory/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
           <Route path='/product/:id' element={<ProductDetail/>}/>

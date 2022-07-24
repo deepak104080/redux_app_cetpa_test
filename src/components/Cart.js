@@ -64,7 +64,7 @@ const Cart = () => {
                                 <tr>
                                     <td>1</td>
                                     <td>{tempItem.title || ' '}</td>
-                                    <td><img src={tempItem.image} alt="product image" className="img-fluid" /></td>
+                                    <td><img src={tempItem.image} alt="product image" className="img-fluid cart-image" /></td>
                                     <td>{tempItem.price || ' '}</td>
                                     {/* <td>1</td> */}
                                     <td>{tempItem.price || ' '}</td>

@@ -2,14 +2,16 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setProducts } from "../redux/actions/productActions";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-const ProductList = () => {
+const ProductListCategory = () => {
     const products = useSelector((state) => state.allProducts.products);
     const dispatch = useDispatch();
 
+    const {category} = useParams();
+
     const fetchProducts = () => {
-        axios.get('http://localhost:4000/products')
+        axios.get(`http://localhost:4000/products/category/${category}`)
         .then((response) => {
             console.log(response.data);
             dispatch(setProducts(response.data));
@@ -18,7 +20,7 @@ const ProductList = () => {
 
     useEffect(() => {
         fetchProducts();
-    }, [])
+    }, [category])
     return(
         <> 
             <div className="row bg-success bg-opacity-10">
@@ -54,7 +56,7 @@ const ProductList = () => {
 }
 
 
-export default ProductList;
+export default ProductListCategory;
 
 
 //Redux Middleware - Redu-saga, Redux-thunk

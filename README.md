@@ -109,6 +109,7 @@ Pages/Features List -
 
 Module 1 - End User Module
 *HomePage - List - API 1
+*Category Product List - API 10
 *Product Details - API 2
 *Cart
 Checkout - API 3 and 7
@@ -134,6 +135,7 @@ List of APIs
 7) POST - Order Details - Order Details Table - **Secure
 8) GET - All Orders - Orders - **Secure
 9) GET - User Orders - Orders - Secure
+10) GET - Category wise Products - Non-secure
 
 # ###########################################################
 
