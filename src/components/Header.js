@@ -41,7 +41,7 @@ const Header = () => {
                 (
                     <>
                     <span className="btn btn-warning">
-                        {loginDetails.userName}
+                        {loginDetails.userName.username}
                     </span>
                     
                     <button className="btn btn-primary" onClick={logoutfn}>Logout</button>

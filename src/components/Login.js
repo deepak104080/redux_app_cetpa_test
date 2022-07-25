@@ -43,7 +43,9 @@ const Login = () => {
                 })
                 //console.log(response);
                 if(response.status === 200) {
-                    dispatch(loginUser(username));
+                    //dispatch(loginUser(username));
+                    //store complete obj coming from back end
+                    dispatch(loginUser(response.data));
                     errorRef.current.textContent = '';
                 }
             }

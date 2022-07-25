@@ -23,7 +23,7 @@ const Orders = () => {
     }
 
     const callOrderListApi = async () => {
-        const url = 'http://localhost:4000/orders/orderbyuser/' + loginDetails.userName;
+        const url = 'http://localhost:4000/orders/orderbyuser/' + loginDetails.userName.username;
         const response = await axios.get(url);
         console.log(response);
         setListOrders(response.data);

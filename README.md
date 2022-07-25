@@ -163,7 +163,8 @@ Authorization - Auth0, Passport, JWT Tokens
 
 JWT - Json Web Token
 Step 1 - Back End - Create Token and send on login
-Step 2 - Front End - Receive token and save local
+Step 2 - Front End - Receive token and save local - localStorage/Redux/Context
+Step 2.1 - Check login using jwt token on front end
 Step 3 - Front End - Send on secure api call in header
 Step 4 - Back End - Verify token on api middleware
 

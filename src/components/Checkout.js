@@ -40,7 +40,7 @@ const Checkout = () => {
     const placeOrderFn = async () => {
         let obj = {};
         obj.amount = cartProductList.reduce((a,b) => a + b.price, 0);
-        obj.username = loginDetails.userName;
+        obj.username = loginDetails.userName.username;
         obj.mobile = orderDetails.mobile;
         obj.address = orderDetails.address;
         obj.pincode = orderDetails.pincode;
@@ -52,7 +52,11 @@ const Checkout = () => {
         const url = 'http://localhost:4000/orders/placeorder';
 
         try{
-            const response = await axios.post(url, obj);
+            const response = await axios.post(url, obj, {
+                headers: {
+                    "x-access-token": loginDetails.userName.token
+                }
+            });
             console.log(response);
             if(response.status === 201) {
                 console.log('response.orderid', response.data.orderid);
