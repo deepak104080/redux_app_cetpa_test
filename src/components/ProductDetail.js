@@ -48,10 +48,11 @@ const ProductDetail = () => {
 
     useEffect(() => {
         return () => {
+            console.log('------unmount------')
           //remove current product from cart
           dispatch(removeSelectedProduct());
         };
-      }, []);
+    }, []);
 
     const addCartFn = () => {
         //call api to add data on server cart

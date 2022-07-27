@@ -30,7 +30,7 @@ const Header = () => {
         <div className="row bg-warning bg-opacity-50">
             <div className="col-8">
                 <Link className="btn btn-success me-2" to="/category/menclothes">Men Clothes</Link>
-                <Link className="btn btn-success me-2" to="/category/womenclothes">Women ClothesBaggage</Link>
+                <Link className="btn btn-success me-2" to="/category/womenclothes">Women Clothes</Link>
                 <Link className="btn btn-success me-2" to="/category/jewellery">Jewellery</Link>
                 <Link className="btn btn-success me-2" to="/category/baggage">Baggage</Link>
             </div>
