@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setProducts } from "../redux/actions/productActions";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { AltButton, SubmitButton } from './shared/AltButton.style';
 
 const ProductList = () => {
     const products = useSelector((state) => state.allProducts.products);
@@ -25,6 +26,9 @@ const ProductList = () => {
                 <div className="col-12">
                     <h3>Products List</h3>
                 </div>
+
+                <AltButton>test alt button</AltButton>
+                <SubmitButton>test alt button</SubmitButton>
             </div>
 
             <div className="row bg-secondary bg-opacity-10">
