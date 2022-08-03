@@ -1,5 +1,5 @@
 import './App.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -20,21 +20,21 @@ function App() {
   return (
     <div className="container">
       <BrowserRouter>
-        <Header/>
+        <Header />
         <Routes>
-          <Route path='/' element={<ProductList/>}/>
-          <Route path='/category/:category' element={<ProductListCategory/>}/>
-          <Route path='/login' element={<Login/>}/>
-          <Route path='/register' element={<Register/>}/>
-          <Route path='/product/:id' element={<ProductDetail/>}/>
-          <Route path='/cart' element={<Cart/>}/>
-          <Route path='/checkout' element={<Checkout/>}/>
-          <Route path='/orders' element={<Orders/>}/>
-          <Route path='/templist' element={<TempList/>}/>
-          <Route path='/templist2' element={<TempList2/>}/>
-          <Route path='/addproduct' element={<AddProduct/>}/>
+          <Route path="/" element={<ProductList />} />
+          <Route path="/category/:category" element={<ProductListCategory />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/templist" element={<TempList />} />
+          <Route path="/templist2" element={<TempList2 />} />
+          <Route path="/addproduct" element={<AddProduct />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </div>
   );

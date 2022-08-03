@@ -1,22 +1,15 @@
-import { ActionTypes } from "../constants/action-types";
+import { ActionTypes } from '../constants/action-types';
 
+export const loginUser = (userDetails) => ({
+  type: ActionTypes.LOGIN,
+  payload: userDetails,
+});
 
-export const loginUser = (userDetails) => {
-    return {
-        type: ActionTypes.LOGIN,
-        payload: userDetails
-    }
-}
+export const logoutUser = () => ({
+  type: ActionTypes.LOGOUT,
+});
 
-export const logoutUser = () => {
-    return {
-        type: ActionTypes.LOGOUT,
-    }
-}
-
-export const saveUrl = (str) => {
-    return {
-        type: ActionTypes.SAVE_URL,
-        payload: str
-    }
-}
+export const saveUrl = (str) => ({
+  type: ActionTypes.SAVE_URL,
+  payload: str,
+});
