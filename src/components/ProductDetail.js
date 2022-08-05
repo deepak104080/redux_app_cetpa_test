@@ -67,7 +67,7 @@ function ProductDetail() {
 
             <div className="row">
               <div className="col-5">
-                <img src={image} alt="product image" className="img-fluid" />
+                <img alt="" src={image} className="img-fluid" />
               </div>
               <div className="col-4">
                 <h3>{title || ' '}</h3>
@@ -90,7 +90,7 @@ function ProductDetail() {
                 <br />
                 {loginDetails.loginStatus && (
                   <>
-                    <button className="btn btn-warning">Add to Wishlist</button>
+                    <button type="button" className="btn btn-warning">Add to Wishlist</button>
                     <br />
                     <br />
                     {
@@ -103,7 +103,7 @@ function ProductDetail() {
                           </>
                         )
                         : (
-                          <button onClick={addCartFn} className="btn btn-success">Add to Cart</button>
+                          <button type="button" onClick={addCartFn} className="btn btn-success">Add to Cart</button>
                         )
                     }
 
@@ -114,7 +114,7 @@ function ProductDetail() {
 
             </div>
           ) : (
-            <img src="https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif" />
+            <img alt="" src="https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif" />
           )}
         </div>
       </div>

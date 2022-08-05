@@ -43,10 +43,11 @@ function ProductList() {
           <div className="row">
             {products && products.map((temp, index) => (
 
+              // eslint-disable-next-line react/no-array-index-key
               <div className="col-3 border my-2" key={temp.productid + index}>
                 <Link to={`/product/${temp.id}`}>
                   <div>
-                    <img src={temp.image} className="img-fluid home-image" />
+                    <img alt="Product" src={temp.image} className="img-fluid home-image" />
                   </div>
                 </Link>
                 <div className="fw-bold">

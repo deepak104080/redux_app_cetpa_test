@@ -55,7 +55,7 @@ function Cart() {
               <th>Rate</th>
               {/* <th>Quantity</th> */}
               <th>Total Cost</th>
-              <th />
+              <th>Actions</th>
             </tr>
 
             {
@@ -63,11 +63,11 @@ function Cart() {
                 <tr>
                   <td>1</td>
                   <td>{tempItem.title || ' '}</td>
-                  <td><img src={tempItem.image} alt="product image" className="img-fluid cart-image" /></td>
+                  <td><img alt="product" src={tempItem.image} className="img-fluid cart-image" /></td>
                   <td>{tempItem.price || ' '}</td>
                   {/* <td>1</td> */}
                   <td>{tempItem.price || ' '}</td>
-                  <td><button className="btn btn-danger" onClick={() => removeProduct(tempItem.id)}>Remove</button></td>
+                  <td><button type="button" className="btn btn-danger" onClick={() => removeProduct(tempItem.id)}>Remove</button></td>
                 </tr>
               ))
             }
@@ -79,7 +79,7 @@ function Cart() {
 
       <div className="row bg-info bg-opacity-10">
         <div className="col-6 text-center">
-          <button onClick={checkoutFn} className="btn btn-primary">Proceed to Checkout</button>
+          <button type="button" onClick={checkoutFn} className="btn btn-primary">Proceed to Checkout</button>
         </div>
         <div className="col-6 text-center">
           <Link to="/" className="btn btn-info">Continue Shopping</Link>

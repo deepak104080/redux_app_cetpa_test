@@ -39,7 +39,7 @@ function TempList(props) {
 
       <div className="row bg-success bg-opacity-10">
         <div className="col-12">
-          <button className="btn btn-primary" onClick={callApi}>Fetch Products List</button>
+          <button type="button" className="btn btn-primary" onClick={callApi}>Fetch Products List</button>
         </div>
       </div>
 
@@ -48,10 +48,11 @@ function TempList(props) {
           <div className="row">
             {products && products.map((temp, index) => (
 
+              // eslint-disable-next-line react/no-array-index-key
               <div className="col-4 border" key={temp.id + index}>
                 <Link to={`/product/${temp.id}`}>
                   <div>
-                    <img src={temp.image} className="img-fluid" />
+                    <img alt="" src={temp.image} className="img-fluid" />
                   </div>
                 </Link>
                 <div>

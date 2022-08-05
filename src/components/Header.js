@@ -49,7 +49,7 @@ function Header() {
                     {loginDetails.userName.username}
                   </span>
 
-                  <button className="btn btn-primary" onClick={logoutfn}>Logout</button>
+                  <button type="button" className="btn btn-primary" onClick={logoutfn}>Logout</button>
                 </>
               )
               : (

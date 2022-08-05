@@ -20,11 +20,14 @@
     "rules": {
         "indent": ["error", 2],
         "linebreak-style": ["error", "windows"],
+        "no-unused-vars": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "quotes": ["error", "single"],
         "semi": ["error", "always"],
         "react/react-in-jsx-scope": "off",
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "no-unused-vars": "off",
-        "camelcase": "off"
+        "camelcase": "off",
+        "import/prefer-default-export": "off",
+        "default-param-last": 0,
+        "react/prop-types": "off"
     }
 }

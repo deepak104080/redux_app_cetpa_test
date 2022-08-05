@@ -83,7 +83,7 @@ function Register() {
           {' '}
           <input type="password" name="" ref={inputRef5} />
           <br />
-          <button className="btn btn-success" onClick={registerFn}>Register</button>
+          <button type="button" className="btn btn-success" onClick={registerFn}>Register</button>
           <div className="text-danger" ref={errorRef} />
         </div>
       </div>

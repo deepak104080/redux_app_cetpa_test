@@ -1,5 +1,5 @@
 import {
-  call, put, takeEvery, takeLatest,
+  call, put, takeLatest,
 } from 'redux-saga/effects';
 import axios from 'axios';
 import { ActionTypes } from '../constants/action-types';
@@ -17,7 +17,7 @@ const fetchProducts = () => new Promise((resolve, reject) => {
     });
 });
 
-function* fetchproductslist(action) {
+function* fetchproductslist() {
   try {
     const data = yield call(fetchProducts);
     yield put({ type: ActionTypes.FETCH_PRODUCTS_LIST_SUCCESS, payload: data });

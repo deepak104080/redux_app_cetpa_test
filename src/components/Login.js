@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { useEffect, useRef } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -86,7 +87,7 @@ function Login() {
           {' '}
           <input type="password" name="" ref={inputRef2} />
           <br />
-          <button className="btn btn-success" onClick={loginFn}>Login</button>
+          <button type="button" className="btn btn-success" onClick={loginFn}>Login</button>
           <div className="text-danger" ref={errorRef} />
         </div>
       </div>

@@ -152,13 +152,13 @@ function Checkout() {
             <option value="Cards">Cards</option>
           </select>
           <br />
-          <button onClick={paymentFn} className="btn btn-warning bg-opacity-50">Mark Payment Done</button>
+          <button type="button" onClick={paymentFn} className="btn btn-warning bg-opacity-50">Mark Payment Done</button>
         </div>
       </div>
 
       <div className="row bg-info bg-opacity-10">
         <div className="col-12 ">
-          <button onClick={placeOrderFn} className="btn btn-primary">Place Order</button>
+          <button type="button" onClick={placeOrderFn} className="btn btn-primary">Place Order</button>
         </div>
       </div>
 
