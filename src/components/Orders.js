@@ -16,14 +16,17 @@ function Orders() {
   console.log('state', state);
 
   const callOrderApi = async () => {
-    const url = `http://localhost:4000/orders/orderbyorder/${state}`;
+    // const url = `http://localhost:4000/orders/orderbyorder/${state}`;
+    const url = `${process.env.REACT_APP_API_URL}orders/orderbyorder/${state}`;
     const response = await axios.get(url);
     console.log(response);
     setOrder(response.data);
   };
 
   const callOrderListApi = async () => {
-    const url = `http://localhost:4000/orders/orderbyuser/${loginDetails.userName.username}`;
+    // const url = `http://localhost:4000/orders/orderbyuser/${loginDetails.userName.username}`;
+    const url = `${process.env.REACT_APP_API_URL}orders/orderbyuser/${loginDetails.userName.username}`;
+
     const response = await axios.get(url);
     console.log(response);
     setListOrders(response.data);

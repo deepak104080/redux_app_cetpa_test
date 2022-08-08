@@ -44,7 +44,8 @@ function AddProduct() {
     obj.image = inputRef6.current.value;
     if (obj.id !== '' && obj.name !== '' && obj.price !== '' && obj.category !== '') {
       // call api to add product
-      const url = 'http://localhost:4000/products/';
+      // const url = 'http://localhost:4000/products/';
+      const url = `${process.env.REACT_APP_API_URL}products/`;
       const response = await axios.post(url, obj).catch((err) => console.log('err', err));
       console.log(response);
     } else {

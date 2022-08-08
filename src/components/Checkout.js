@@ -48,7 +48,8 @@ function Checkout() {
 
     console.log('obj sent', obj);
 
-    const url = 'http://localhost:4000/orders/placeorder';
+    // const url = 'http://localhost:4000/orders/placeorder';
+    const url = `${process.env.REACT_APP_API_URL}orders/placeorder/`;
 
     try {
       const response = await axios.post(url, obj, {

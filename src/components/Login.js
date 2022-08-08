@@ -37,7 +37,9 @@ function Login() {
       // const url = 'http://4000/users/login?username=deepak123&password=12345';
       // const url = 'http://4000/users/login/deepak123/12345'
       try {
-        const response = await axios.post('http://localhost:4000/users/login', {
+        // const url = 'http://localhost:4000/users/login'
+        const url = `${process.env.REACT_APP_API_URL}users/login/`;
+        const response = await axios.post(url, {
           username,
           password,
         });

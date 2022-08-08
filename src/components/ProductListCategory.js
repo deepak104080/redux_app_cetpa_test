@@ -11,7 +11,9 @@ function ProductListCategory() {
   const { category } = useParams();
 
   const fetchProducts = () => {
-    axios.get(`http://localhost:4000/products/category/${category}`)
+    // const url = `http://localhost:4000/products/category/${category}`;
+    const url = `${process.env.REACT_APP_API_URL}products/category/${category}`;
+    axios.get(url)
       .then((response) => {
         console.log(response.data);
         dispatch(setProducts(response.data));

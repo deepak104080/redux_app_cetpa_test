@@ -20,7 +20,9 @@ function Register() {
     const mobile = inputRef4.current.value;
     const password = inputRef5.current.value;
     if (username !== '' && email !== '' && password !== '') {
-      const response = await axios.post('http://localhost:4000/users/adduser', {
+      // const url = 'http://localhost:4000/users/adduser';
+      const url = `${process.env.REACT_APP_API_URL}users/adduser`;
+      const response = await axios.post(url, {
         username,
         name,
         email,
