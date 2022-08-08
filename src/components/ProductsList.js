@@ -29,13 +29,14 @@ function ProductList() {
           <h3>Products List</h3>
         </div>
 
-        <AltButton>test alt button</AltButton>
+        {/* Examples of styled components */}
+        {/* <AltButton>test alt button</AltButton>
         <SubmitButton>test alt button</SubmitButton>
         <DangerText>Danger Text</DangerText>
         <SuccessText>Success Text</SuccessText>
         <Text color="green">Text 123</Text>
         <Text color="blue">Text 123</Text>
-        <Text color="red">Text 123</Text>
+        <Text color="red">Text 123</Text> */}
       </div>
 
       <div className="row bg-secondary bg-opacity-10">
