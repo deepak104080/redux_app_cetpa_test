@@ -1,0 +1,46 @@
+$color1: #840b0b;
+$fontColor1: #dddddd;
+
+.mybutton1 {
+    font-size: 50px;
+    background-color: $color1;
+    color: $fontColor1;
+}
+
+
+.testClass {
+    .mybutton1 {
+        background-color: red;
+    }
+    .mybutton2 {
+        background-color: red;
+    }
+    .mybutton3 {
+        background-color: red;
+    }
+    .mybutton4 {
+        background-color: red;
+    }
+    .mybutton5 {
+        background-color: red;
+    }
+    .mybutton6 {
+        background-color: red;
+    }
+}
+
+// .testClass .mybutton1 {
+//     background-color: red;
+// }
+// .testClass .mybutton2 {
+//     background-color: red;
+// }
+// .testClass .mybutton3 {
+//     background-color: red;
+// }.testClass .mybutton4 {
+//     background-color: red;
+// }.testClass .mybutton5 {
+//     background-color: red;
+// }.testClass .mybutton6 {
+//     background-color: red;
+// }

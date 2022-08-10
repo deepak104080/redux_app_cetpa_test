@@ -6,6 +6,7 @@ import { setProducts } from '../redux/actions/productActions';
 import {
   AltButton, SubmitButton, DangerText, SuccessText, Text,
 } from './shared/AltButton.style';
+import '../test.scss';
 
 function ProductList() {
   const products = useSelector((state) => state.allProducts.products);
@@ -24,9 +25,15 @@ function ProductList() {
   }, []);
   return (
     <>
-      <div className="row bg-success bg-opacity-10">
+      <div className="row bg-success bg-opacity-10 testClass">
         <div className="col-12">
           <h3>Products List</h3>
+          <button type="button" className="mybutton1">test button 1</button>
+          <button type="button" className="mybutton2">test button 1</button>
+          <button type="button" className="mybutton3">test button 1</button>
+          <button type="button" className="mybutton4">test button 1</button>
+          <button type="button" className="mybutton5">test button 1</button>
+          <button type="button" className="mybutton6">test button 1</button>
         </div>
 
         {/* Examples of styled components */}
